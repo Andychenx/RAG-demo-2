@@ -1,0 +1,740 @@
+2026-04-12 17:21:48,781 - agent - ERROR - file_handler.py:37 - [listdir_with_allowed_type]data不是文件夹
+2026-04-12 17:21:48,781 - agent - ERROR - file_handler.py:10 - [md5 计算]文件txt不存在
+2026-04-12 17:21:48,781 - agent - ERROR - vector_store.py:94 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 73, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 55, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-04-12 17:21:48,782 - agent - ERROR - file_handler.py:10 - [md5 计算]文件pdf不存在
+2026-04-12 17:21:48,782 - agent - ERROR - vector_store.py:94 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 73, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 58, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 47, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-04-12 17:22:28,656 - agent - ERROR - file_handler.py:37 - [listdir_with_allowed_type]data不是文件夹
+2026-04-12 17:22:28,656 - agent - ERROR - file_handler.py:10 - [md5 计算]文件txt不存在
+2026-04-12 17:22:28,656 - agent - ERROR - vector_store.py:94 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 73, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 55, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-04-12 17:22:28,657 - agent - ERROR - file_handler.py:10 - [md5 计算]文件pdf不存在
+2026-04-12 17:22:28,657 - agent - ERROR - vector_store.py:94 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 73, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 58, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 47, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-04-12 17:23:06,488 - agent - ERROR - file_handler.py:37 - [listdir_with_allowed_type]data不是文件夹
+2026-04-12 17:23:06,488 - agent - ERROR - file_handler.py:10 - [md5 计算]文件txt不存在
+2026-04-12 17:23:06,488 - agent - ERROR - vector_store.py:94 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 73, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 55, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-04-12 17:23:06,489 - agent - ERROR - file_handler.py:10 - [md5 计算]文件pdf不存在
+2026-04-12 17:23:06,489 - agent - ERROR - vector_store.py:94 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 73, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 58, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 47, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-04-12 17:28:04,993 - agent - INFO - logger_handler.py:46 - 信息日志
+2026-04-12 17:28:04,993 - agent - ERROR - logger_handler.py:47 - 错误日志
+2026-04-12 17:28:04,993 - agent - WARNING - logger_handler.py:48 - 警告日志
+2026-04-12 17:28:04,993 - agent - DEBUG - logger_handler.py:49 - 调试日志
+2026-04-12 17:38:42,297 - agent - ERROR - file_handler.py:39 - [listdir_with_allowed_type]data不是文件夹
+2026-04-12 17:38:42,297 - agent - ERROR - file_handler.py:11 - [md5 计算]文件txt不存在
+2026-04-12 17:38:42,298 - agent - ERROR - vector_store.py:95 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 56, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-04-12 17:38:42,298 - agent - ERROR - file_handler.py:11 - [md5 计算]文件pdf不存在
+2026-04-12 17:38:42,298 - agent - ERROR - vector_store.py:95 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 59, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-04-12 17:47:47,999 - agent - ERROR - file_handler.py:39 - [listdir_with_allowed_type]data不是文件夹
+2026-04-12 17:47:47,999 - agent - ERROR - file_handler.py:11 - [md5 计算]文件txt不存在
+2026-04-12 17:47:47,999 - agent - ERROR - vector_store.py:95 - [加载知识库]txt加载失败：Error loading txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 42, in lazy_load
+    with open(self.file_path, encoding=self.encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'txt'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 56, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 58, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading txt
+2026-04-12 17:47:47,999 - agent - ERROR - file_handler.py:11 - [md5 计算]文件pdf不存在
+2026-04-12 17:47:48,000 - agent - ERROR - vector_store.py:95 - [加载知识库]pdf加载失败：File path pdf is not a valid file or url
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 59, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 281, in __init__
+    super().__init__(file_path, headers=headers)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 140, in __init__
+    raise ValueError("File path %s is not a valid file or url" % self.file_path)
+ValueError: File path pdf is not a valid file or url
+2026-04-12 17:48:30,883 - agent - ERROR - vector_store.py:99 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 60, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-04-12 17:48:30,884 - agent - ERROR - vector_store.py:99 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt
+2026-04-12 17:48:30,885 - agent - ERROR - vector_store.py:99 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt
+2026-04-12 17:48:30,885 - agent - ERROR - vector_store.py:99 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt
+2026-04-12 17:48:30,886 - agent - ERROR - vector_store.py:99 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt
+2026-04-12 17:48:30,886 - agent - ERROR - vector_store.py:99 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 78, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 57, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt
+2026-04-12 17:55:04,466 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 59, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-04-12 17:55:04,467 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 56, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt
+2026-04-12 17:55:04,468 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 56, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt
+2026-04-12 17:55:04,469 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 56, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt
+2026-04-12 17:55:04,469 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 4: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 56, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt
+2026-04-12 17:55:04,470 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt加载失败：Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 43, in lazy_load
+    text = f.read()
+UnicodeDecodeError: 'gbk' codec can't decode byte 0xab in position 2: illegal multibyte sequence
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 56, in get_file_documents
+    return txt_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 54, in txt_loader
+    return TextLoader(filepath).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\text.py", line 56, in lazy_load
+    raise RuntimeError(f"Error loading {self.file_path}") from e
+RuntimeError: Error loading E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt
+2026-04-12 18:01:56,653 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 59, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-04-12 18:01:56,654 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:01:56,655 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:01:56,655 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:01:56,655 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:01:56,656 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:04:10,296 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 59, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-04-12 18:04:10,297 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:04:10,298 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:04:10,298 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:04:10,298 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:04:10,299 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt加载失败：'VectorStoreService' object has no attribute 'spliter'
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 80, in load_document
+    split_document: list[Document] = self.spliter.split_documents(documents)
+AttributeError: 'VectorStoreService' object has no attribute 'spliter'
+2026-04-12 18:04:30,219 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 59, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-04-12 18:04:32,912 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容加载成功
+2026-04-12 18:04:35,828 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容加载成功
+2026-04-12 18:04:40,662 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容加载成功
+2026-04-12 18:04:43,490 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容加载成功
+2026-04-12 18:04:47,102 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容加载成功
+2026-04-12 18:07:27,052 - agent - ERROR - vector_store.py:95 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf加载失败：`pypdf` package not found, please install it with `pip install pypdf`
+Traceback (most recent call last):
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 359, in lazy_parse
+    import pypdf
+ModuleNotFoundError: No module named 'pypdf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 74, in load_document
+    documents: list[Document] = get_file_documents(path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\rag\vector_store.py", line 59, in get_file_documents
+    return pdf_loader(read_path)
+  File "E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\utils\file_handler.py", line 50, in pdf_loader
+    return PyPDFLoader(filepath, passwd).load()
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_core\document_loaders\base.py", line 43, in load
+    return list(self.lazy_load())
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\pdf.py", line 305, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "D:\ProgramData\anaconda3\envs\agent-env\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 361, in lazy_parse
+    raise ImportError(
+ImportError: `pypdf` package not found, please install it with `pip install pypdf`
+2026-04-12 18:07:29,536 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容加载成功
+2026-04-12 18:07:32,274 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容加载成功
+2026-04-12 18:07:37,613 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容加载成功
+2026-04-12 18:07:40,226 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容加载成功
+2026-04-12 18:07:42,580 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容加载成功
+2026-04-12 18:08:14,027 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容加载成功
+2026-04-12 18:08:16,164 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容加载成功
+2026-04-12 18:08:19,686 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容加载成功
+2026-04-12 18:08:25,661 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容加载成功
+2026-04-12 18:08:28,774 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容加载成功
+2026-04-12 18:08:31,393 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容加载成功
+2026-04-12 18:11:55,230 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容加载成功
+2026-04-12 18:11:57,785 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容加载成功
+2026-04-12 18:12:00,864 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容加载成功
+2026-04-12 18:12:05,592 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容加载成功
+2026-04-12 18:12:08,762 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容加载成功
+2026-04-12 18:12:11,213 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容加载成功
+2026-04-12 20:23:29,758 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容加载成功
+2026-04-12 20:23:31,983 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容加载成功
+2026-04-12 20:23:34,609 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容加载成功
+2026-04-12 20:23:39,225 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容加载成功
+2026-04-12 20:23:41,624 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容加载成功
+2026-04-12 20:23:44,045 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容加载成功
+2026-04-12 20:25:18,354 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-04-12 20:25:18,355 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:18,355 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:18,355 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:18,355 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:18,356 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:32,930 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-04-12 20:25:32,930 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:32,931 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:32,931 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:32,931 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:32,931 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:51,461 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-04-12 20:25:51,461 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:51,462 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:51,462 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:51,462 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-12 20:25:51,462 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:41,526 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-04-12 20:26:41,526 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:41,526 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:41,526 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:41,526 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:41,527 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:46,256 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容已经存在知识库内，跳过
+2026-04-12 20:26:46,256 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:46,256 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:46,257 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:46,257 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容已经存在知识库内，跳过
+2026-04-12 20:26:46,257 - agent - INFO - vector_store.py:70 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容已经存在知识库内，跳过
+2026-04-12 20:27:19,135 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问.pdf内容加载成功
+2026-04-12 20:27:21,066 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫地机器人100问2.txt内容加载成功
+2026-04-12 20:27:23,547 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\扫拖一体机器人100问.txt内容加载成功
+2026-04-12 20:27:28,854 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\故障排除.txt内容加载成功
+2026-04-12 20:27:31,431 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\维护保养.txt内容加载成功
+2026-04-12 20:27:33,897 - agent - INFO - vector_store.py:92 - [加载知识库]E:\codeProject\AIAgent\Agent-demo\AgentProject\AgentRAGProjectDemo\data\选购指南.txt内容加载成功
+2026-04-12 20:53:59,008 - agent - WARNING - agent_tools.py:133 - [fetch_external_data]未能检索到用户：1021在2025-01的使用记录数据
+2026-04-12 21:55:57,188 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有0条信息。
+2026-04-12 21:59:27,069 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有0条信息。
+2026-04-12 22:01:19,414 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有1条信息。
+2026-04-12 22:01:19,414 - agent - DEBUG - middleware.py:41 - [log_before_model] HumanMessage | 扫地机器人在我所在的地区的气温下如何保养？
+2026-04-12 22:01:23,575 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：get_user_location
+2026-04-12 22:01:23,576 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{}
+2026-04-12 22:01:23,577 - agent - INFO - middleware.py:23 - [monitor_tool]工具get_user_location调用成功
+2026-04-12 22:01:23,578 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有3条信息。
+2026-04-12 22:01:23,578 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 南京
+2026-04-12 22:01:26,070 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：get_weather
+2026-04-12 22:01:26,070 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'city': '南京'}
+2026-04-12 22:01:26,667 - agent - INFO - middleware.py:23 - [monitor_tool]工具get_weather调用成功
+2026-04-12 22:01:26,668 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有5条信息。
+2026-04-12 22:01:26,668 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 南京今日天气：细雨，14°C，风速 ←18km/h，降水 1012hPa
+2026-04-12 22:01:29,985 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：rag_summarize
+2026-04-12 22:01:29,985 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'query': '扫地机器人在14度潮湿环境下如何保养'}
+2026-04-12 22:01:31,298 - agent - INFO - middleware.py:23 - [monitor_tool]工具rag_summarize调用成功
+2026-04-12 22:01:31,298 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有7条信息。
+2026-04-12 22:01:31,298 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 参考资料中未提及扫地机器人在14度潮湿环境下的具体保养方法。
+2026-04-12 22:01:34,515 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：rag_summarize
+2026-04-12 22:01:34,516 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'query': '扫地机器人潮湿环境保养'}
+2026-04-12 22:01:37,781 - agent - INFO - middleware.py:23 - [monitor_tool]工具rag_summarize调用成功
+2026-04-12 22:01:37,781 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有9条信息。
+2026-04-12 22:01:37,781 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 扫地机器人应避免在潮湿环境中使用和存放，以免内部电子元件受潮损坏；使用后需及时清理尘盒和滤网，并确保设备干燥；若不慎进水，应立即断电并联系售后处理。
+2026-04-12 22:06:43,090 - agent - INFO - logger_handler.py:51 - 信息日志
+2026-04-12 22:06:43,090 - agent - ERROR - logger_handler.py:52 - 错误日志
+2026-04-12 22:06:43,090 - agent - WARNING - logger_handler.py:53 - 警告日志
+2026-04-12 22:06:43,090 - agent - DEBUG - logger_handler.py:54 - 调试日志
+2026-04-12 22:07:52,317 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有1条信息。
+2026-04-12 22:07:52,317 - agent - DEBUG - middleware.py:41 - [log_before_model] HumanMessage | 扫地机器人在我所在的地区的气温下如何保养？
+2026-04-12 22:07:54,947 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：get_user_location
+2026-04-12 22:07:54,947 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{}
+2026-04-12 22:07:54,947 - agent - INFO - middleware.py:23 - [monitor_tool]工具get_user_location调用成功
+2026-04-12 22:07:54,948 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有3条信息。
+2026-04-12 22:07:54,948 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 北京
+2026-04-12 22:07:57,836 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：get_weather
+2026-04-12 22:07:57,836 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'city': '北京'}
+2026-04-12 22:07:58,851 - agent - INFO - middleware.py:23 - [monitor_tool]工具get_weather调用成功
+2026-04-12 22:07:58,852 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有5条信息。
+2026-04-12 22:07:58,853 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 北京今日天气：局部多云，19°C，风速 ↖7km/h，降水 1012hPa
+2026-04-12 22:08:01,651 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：rag_summarize
+2026-04-12 22:08:01,651 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'query': '扫地机器人在19度气温下如何保养'}
+2026-04-12 22:08:04,326 - agent - INFO - middleware.py:23 - [monitor_tool]工具rag_summarize调用成功
+2026-04-12 22:08:04,327 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有7条信息。
+2026-04-12 22:08:04,327 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 参考资料中未提及扫地机器人在19度气温下的具体保养方法。
+2026-04-12 22:08:09,359 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：rag_summarize
+2026-04-12 22:08:09,359 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'query': '扫地机器人季节性保养和温度适应性维护'}
+2026-04-12 22:08:13,470 - agent - INFO - middleware.py:23 - [monitor_tool]工具rag_summarize调用成功
+2026-04-12 22:08:13,472 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有9条信息。
+2026-04-12 22:08:13,472 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 扫地机器人应根据季节变化进行保养：夏季高温高湿环境下需注意防潮、避免电池过热，定期清理尘盒和滤网以防霉变；冬季低温可能导致电池续航下降，建议在室温环境中充电并避免长时间闲置。日常维护包括及时清理滚刷、边刷及传感器，确保设备在适宜温度范围内（通常为0℃~40℃）运行，以维持性能和延长使用寿命。
+2026-04-12 22:09:10,974 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有1条信息。
+2026-04-12 22:09:10,974 - agent - DEBUG - middleware.py:41 - [log_before_model] HumanMessage | 生成我的使用报告。
+2026-04-12 22:09:13,005 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：get_user_id
+2026-04-12 22:09:13,005 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{}
+2026-04-12 22:09:13,006 - agent - INFO - middleware.py:23 - [monitor_tool]工具get_user_id调用成功
+2026-04-12 22:09:13,007 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有3条信息。
+2026-04-12 22:09:13,007 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 1010
+2026-04-12 22:09:15,018 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：get_current_month
+2026-04-12 22:09:15,018 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{}
+2026-04-12 22:09:15,018 - agent - INFO - middleware.py:23 - [monitor_tool]工具get_current_month调用成功
+2026-04-12 22:09:15,019 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有5条信息。
+2026-04-12 22:09:15,019 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 2025-04
+2026-04-12 22:09:18,365 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：fill_context_for_report
+2026-04-12 22:09:18,365 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{}
+2026-04-12 22:09:18,366 - agent - INFO - middleware.py:23 - [monitor_tool]工具fill_context_for_report调用成功
+2026-04-12 22:09:18,367 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有7条信息。
+2026-04-12 22:09:18,367 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | fill_context_for_report已调用
+2026-04-12 22:09:20,826 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：fetch_external_data
+2026-04-12 22:09:20,826 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'user_id': '1010', 'month': '2025-04'}
+2026-04-12 22:09:20,828 - agent - INFO - middleware.py:23 - [monitor_tool]工具fetch_external_data调用成功
+2026-04-12 22:09:20,829 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有9条信息。
+2026-04-12 22:09:20,829 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | {"特征": "130㎡四居 | 三代同堂 | 通体砖", "效率": "覆盖率:87%\\n手动辅助清扫:1次/天\\n定时清扫使用率:75%", "耗材": "电池衰减:18%\\n边刷寿命:剩余30天", "对比": "大户型中操作便捷性优于同类10%"}
+2026-04-12 22:09:23,176 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：rag_summarize
+2026-04-12 22:09:23,176 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'query': '扫地机器人电池保养和边刷更换建议'}
+2026-04-12 22:09:27,054 - agent - INFO - middleware.py:23 - [monitor_tool]工具rag_summarize调用成功
+2026-04-12 22:09:27,055 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有11条信息。
+2026-04-12 22:09:27,055 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 电池保养建议：避免长时间满电或完全放电存放，定期使用以维持活性；边刷更换建议：根据使用频率每3-6个月更换一次，若出现明显磨损、变形或清扫效果下降应及时更换。
+2026-04-12 22:11:41,036 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有1条信息。
+2026-04-12 22:11:41,037 - agent - DEBUG - middleware.py:41 - [log_before_model] HumanMessage | 生成我的使用报告。
+2026-04-12 22:11:44,069 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：fill_context_for_report
+2026-04-12 22:11:44,070 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{}
+2026-04-12 22:11:44,071 - agent - INFO - middleware.py:23 - [monitor_tool]工具fill_context_for_report调用成功
+2026-04-12 22:11:44,072 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有3条信息。
+2026-04-12 22:11:44,072 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | fill_context_for_report已调用
+2026-04-12 22:11:45,729 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：get_user_id
+2026-04-12 22:11:45,729 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{}
+2026-04-12 22:11:45,729 - agent - INFO - middleware.py:23 - [monitor_tool]工具get_user_id调用成功
+2026-04-12 22:11:45,730 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有5条信息。
+2026-04-12 22:11:45,730 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 1001
+2026-04-12 22:11:47,324 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：get_current_month
+2026-04-12 22:11:47,324 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{}
+2026-04-12 22:11:47,325 - agent - INFO - middleware.py:23 - [monitor_tool]工具get_current_month调用成功
+2026-04-12 22:11:47,326 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有7条信息。
+2026-04-12 22:11:47,327 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 2025-11
+2026-04-12 22:11:49,694 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：fetch_external_data
+2026-04-12 22:11:49,694 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'user_id': '1001', 'month': '2025-11'}
+2026-04-12 22:11:49,695 - agent - INFO - middleware.py:23 - [monitor_tool]工具fetch_external_data调用成功
+2026-04-12 22:11:49,696 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有9条信息。
+2026-04-12 22:11:49,696 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | {"特征": "65㎡公寓 | 单身 | 木地板", "效率": "覆盖率:88%\\n日均清扫:48㎡\\n无漏扫区域（沙发底部垫高）", "耗材": "主刷寿命:剩余35天\\nHEPA滤网:剩余15%", "对比": "优于75%同面积用户（清洁无死角）"}
+2026-04-12 22:11:51,654 - agent - INFO - middleware.py:19 - [monitor_tool]执行工具：rag_summarize
+2026-04-12 22:11:51,654 - agent - INFO - middleware.py:20 - [monitor_tool]传入参数：{'query': '扫地机器人耗材更换周期和保养建议'}
+2026-04-12 22:11:56,503 - agent - INFO - middleware.py:23 - [monitor_tool]工具rag_summarize调用成功
+2026-04-12 22:11:56,504 - agent - INFO - middleware.py:39 - [log_before_model] 即将调用模型，带有11条信息。
+2026-04-12 22:11:56,504 - agent - DEBUG - middleware.py:41 - [log_before_model] ToolMessage | 扫地机器人耗材更换周期和保养建议如下：  
+- 边刷和主刷建议每3-6个月更换一次，若使用频繁或地面灰尘较多，可适当缩短周期；  
+- 滤网建议每月清洗一次，每3-6个月更换一次，HEPA滤网不可水洗，需定期更换；  
+- 电池寿命通常为1-2年，续航明显下降时应考虑更换；  
+- 定期清理尘盒、传感器和滚刷缠绕物，保持机身清洁；  
+- 长时间不用时应取出电池并存放于干燥处。
